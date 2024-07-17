@@ -7,44 +7,79 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD710E5C2C45A7A30080ACFA /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD710E5B2C45A7A30080ACFA /* Launch Screen.storyboard */; };
+		BD710E5E2C45BBE80080ACFA /* CustomCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD710E5D2C45BBE80080ACFA /* CustomCardView.swift */; };
+		BD710E602C45C1AB0080ACFA /* CustomCardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD710E5F2C45C1AB0080ACFA /* CustomCardViewViewModel.swift */; };
+		BD911B502BFF9AEE00245B76 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B4F2BFF9AEE00245B76 /* ProfileView.swift */; };
+		BD911B542BFF9B3600245B76 /* NewCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B532BFF9B3600245B76 /* NewCardView.swift */; };
+		BD911B562BFF9B4E00245B76 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B552BFF9B4E00245B76 /* LoginView.swift */; };
+		BD911B582BFF9B6500245B76 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B572BFF9B6500245B76 /* RegisterView.swift */; };
+		BD911B5A2BFF9B9C00245B76 /* CardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B592BFF9B9C00245B76 /* CardItemView.swift */; };
+		BD911B5C2BFF9D7D00245B76 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B5B2BFF9D7D00245B76 /* User.swift */; };
+		BD911B5E2BFF9D9000245B76 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B5D2BFF9D9000245B76 /* Card.swift */; };
+		BD911B602BFF9DD800245B76 /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B5F2BFF9DD800245B76 /* MainViewViewModel.swift */; };
+		BD911B622BFF9E5E00245B76 /* ProfileViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B612BFF9E5E00245B76 /* ProfileViewViewModel.swift */; };
+		BD911B662BFF9E8900245B76 /* CardListViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B652BFF9E8800245B76 /* CardListViewViewModel.swift */; };
+		BD911B682BFF9EA200245B76 /* NewCardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B672BFF9EA200245B76 /* NewCardViewViewModel.swift */; };
+		BD911B6A2BFF9EAD00245B76 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B692BFF9EAD00245B76 /* LoginViewViewModel.swift */; };
+		BD911B6C2BFF9EB900245B76 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B6B2BFF9EB900245B76 /* RegisterViewViewModel.swift */; };
+		BD911B6E2BFF9EC900245B76 /* CardItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B6D2BFF9EC900245B76 /* CardItemViewViewModel.swift */; };
+		BD911B702BFF9EDC00245B76 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B6F2BFF9EDC00245B76 /* CardListView.swift */; };
+		BD911B722BFFABAA00245B76 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B712BFFABAA00245B76 /* HeaderView.swift */; };
+		BD911B742BFFFCE400245B76 /* COButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B732BFFFCE300245B76 /* COButtonView.swift */; };
+		BD911B762C0019DA00245B76 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B752C0019DA00245B76 /* Extensions.swift */; };
+		BD911B782C003F4B00245B76 /* BankOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B772C003F4B00245B76 /* BankOptions.swift */; };
+		BD911B7A2C0045C500245B76 /* CardOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B792C0045C500245B76 /* CardOption.swift */; };
+		BD911B7C2C00E67000245B76 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B7B2C00E67000245B76 /* Cards.swift */; };
+		BD911B7E2C17EEF600245B76 /* CardChooserViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B7D2C17EEF600245B76 /* CardChooserViewViewModel.swift */; };
 		BDC4C3802BFECF2B0029127E /* Card_Optimizer_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4C37F2BFECF2B0029127E /* Card_Optimizer_AppApp.swift */; };
-		BDC4C3822BFECF2B0029127E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4C3812BFECF2B0029127E /* ContentView.swift */; };
+		BDC4C3822BFECF2B0029127E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4C3812BFECF2B0029127E /* MainView.swift */; };
 		BDC4C3842BFECF2C0029127E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC4C3832BFECF2C0029127E /* Assets.xcassets */; };
 		BDC4C3872BFECF2C0029127E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC4C3862BFECF2C0029127E /* Preview Assets.xcassets */; };
-		BDC4C3922BFECF2D0029127E /* Card_Optimizer_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4C3912BFECF2D0029127E /* Card_Optimizer_AppTests.swift */; };
-		BDC4C39C2BFECF2D0029127E /* Card_Optimizer_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4C39B2BFECF2D0029127E /* Card_Optimizer_AppUITests.swift */; };
-		BDC4C39E2BFECF2D0029127E /* Card_Optimizer_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4C39D2BFECF2D0029127E /* Card_Optimizer_AppUITestsLaunchTests.swift */; };
+		BDC4C3AC2BFED0900029127E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = BDC4C3AB2BFED0900029127E /* FirebaseAnalytics */; };
+		BDC4C3AE2BFED0900029127E /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = BDC4C3AD2BFED0900029127E /* FirebaseAnalyticsOnDeviceConversion */; };
+		BDC4C3B02BFED0900029127E /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BDC4C3AF2BFED0900029127E /* FirebaseAnalyticsSwift */; };
+		BDC4C3B22BFED0900029127E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */ = {isa = PBXBuildFile; productRef = BDC4C3B12BFED0900029127E /* FirebaseAnalyticsWithoutAdIdSupport */; };
+		BDC4C3B42BFED0900029127E /* FirebaseAppCheck in Frameworks */ = {isa = PBXBuildFile; productRef = BDC4C3B32BFED0900029127E /* FirebaseAppCheck */; };
+		BDC4C3B62BFED56D0029127E /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BDC4C3B52BFED56D0029127E /* FirebaseAuth */; };
+		BDC4C3B82BFED56D0029127E /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BDC4C3B72BFED56D0029127E /* FirebaseFirestore */; };
+		BDC4C3BA2BFED56D0029127E /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = BDC4C3B92BFED56D0029127E /* FirebaseFirestoreSwift */; };
+		BDC4C3BC2BFEDA1B0029127E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC4C3BB2BFEDA1B0029127E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		BDC4C38E2BFECF2D0029127E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BDC4C3742BFECF2B0029127E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BDC4C37B2BFECF2B0029127E;
-			remoteInfo = "Card Optimizer App";
-		};
-		BDC4C3982BFECF2D0029127E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BDC4C3742BFECF2B0029127E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BDC4C37B2BFECF2B0029127E;
-			remoteInfo = "Card Optimizer App";
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
+		BD710E5B2C45A7A30080ACFA /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		BD710E5D2C45BBE80080ACFA /* CustomCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardView.swift; sourceTree = "<group>"; };
+		BD710E5F2C45C1AB0080ACFA /* CustomCardViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCardViewViewModel.swift; sourceTree = "<group>"; };
+		BD911B4F2BFF9AEE00245B76 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		BD911B532BFF9B3600245B76 /* NewCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardView.swift; sourceTree = "<group>"; };
+		BD911B552BFF9B4E00245B76 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BD911B572BFF9B6500245B76 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		BD911B592BFF9B9C00245B76 /* CardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemView.swift; sourceTree = "<group>"; };
+		BD911B5B2BFF9D7D00245B76 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		BD911B5D2BFF9D9000245B76 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		BD911B5F2BFF9DD800245B76 /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
+		BD911B612BFF9E5E00245B76 /* ProfileViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewViewModel.swift; sourceTree = "<group>"; };
+		BD911B652BFF9E8800245B76 /* CardListViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListViewViewModel.swift; sourceTree = "<group>"; };
+		BD911B672BFF9EA200245B76 /* NewCardViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewViewModel.swift; sourceTree = "<group>"; };
+		BD911B692BFF9EAD00245B76 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
+		BD911B6B2BFF9EB900245B76 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
+		BD911B6D2BFF9EC900245B76 /* CardItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemViewViewModel.swift; sourceTree = "<group>"; };
+		BD911B6F2BFF9EDC00245B76 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
+		BD911B712BFFABAA00245B76 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		BD911B732BFFFCE300245B76 /* COButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COButtonView.swift; sourceTree = "<group>"; };
+		BD911B752C0019DA00245B76 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		BD911B772C003F4B00245B76 /* BankOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankOptions.swift; sourceTree = "<group>"; };
+		BD911B792C0045C500245B76 /* CardOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOption.swift; sourceTree = "<group>"; };
+		BD911B7B2C00E67000245B76 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
+		BD911B7D2C17EEF600245B76 /* CardChooserViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardChooserViewViewModel.swift; sourceTree = "<group>"; };
 		BDC4C37C2BFECF2B0029127E /* Card Optimizer App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Card Optimizer App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC4C37F2BFECF2B0029127E /* Card_Optimizer_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card_Optimizer_AppApp.swift; sourceTree = "<group>"; };
-		BDC4C3812BFECF2B0029127E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		BDC4C3812BFECF2B0029127E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		BDC4C3832BFECF2C0029127E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDC4C3862BFECF2C0029127E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		BDC4C3882BFECF2C0029127E /* Card_Optimizer_App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Card_Optimizer_App.entitlements; sourceTree = "<group>"; };
-		BDC4C38D2BFECF2D0029127E /* Card Optimizer AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Card Optimizer AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDC4C3912BFECF2D0029127E /* Card_Optimizer_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card_Optimizer_AppTests.swift; sourceTree = "<group>"; };
-		BDC4C3972BFECF2D0029127E /* Card Optimizer AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Card Optimizer AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		BDC4C39B2BFECF2D0029127E /* Card_Optimizer_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card_Optimizer_AppUITests.swift; sourceTree = "<group>"; };
-		BDC4C39D2BFECF2D0029127E /* Card_Optimizer_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card_Optimizer_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		BDC4C3BB2BFEDA1B0029127E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "Card Optimizer App/Other/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,20 +87,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDC4C38A2BFECF2D0029127E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDC4C3942BFECF2D0029127E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				BDC4C3B02BFED0900029127E /* FirebaseAnalyticsSwift in Frameworks */,
+				BDC4C3B62BFED56D0029127E /* FirebaseAuth in Frameworks */,
+				BDC4C3AC2BFED0900029127E /* FirebaseAnalytics in Frameworks */,
+				BDC4C3AE2BFED0900029127E /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				BDC4C3B42BFED0900029127E /* FirebaseAppCheck in Frameworks */,
+				BDC4C3B22BFED0900029127E /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
+				BDC4C3B82BFED56D0029127E /* FirebaseFirestore in Frameworks */,
+				BDC4C3BA2BFED56D0029127E /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,8 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				BDC4C37E2BFECF2B0029127E /* Card Optimizer App */,
-				BDC4C3902BFECF2D0029127E /* Card Optimizer AppTests */,
-				BDC4C39A2BFECF2D0029127E /* Card Optimizer AppUITests */,
 				BDC4C37D2BFECF2B0029127E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -86,8 +113,6 @@
 			isa = PBXGroup;
 			children = (
 				BDC4C37C2BFECF2B0029127E /* Card Optimizer App.app */,
-				BDC4C38D2BFECF2D0029127E /* Card Optimizer AppTests.xctest */,
-				BDC4C3972BFECF2D0029127E /* Card Optimizer AppUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,11 +120,12 @@
 		BDC4C37E2BFECF2B0029127E /* Card Optimizer App */ = {
 			isa = PBXGroup;
 			children = (
-				BDC4C37F2BFECF2B0029127E /* Card_Optimizer_AppApp.swift */,
-				BDC4C3812BFECF2B0029127E /* ContentView.swift */,
-				BDC4C3832BFECF2C0029127E /* Assets.xcassets */,
-				BDC4C3882BFECF2C0029127E /* Card_Optimizer_App.entitlements */,
 				BDC4C3852BFECF2C0029127E /* Preview Content */,
+				BDC4C3882BFECF2C0029127E /* Card_Optimizer_App.entitlements */,
+				BDC4C3C02BFF917C0029127E /* Other */,
+				BDC4C3BF2BFF91610029127E /* Models */,
+				BDC4C3BE2BFF91510029127E /* ViewModels */,
+				BDC4C3BD2BFF91390029127E /* Views */,
 			);
 			path = "Card Optimizer App";
 			sourceTree = "<group>";
@@ -112,21 +138,61 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		BDC4C3902BFECF2D0029127E /* Card Optimizer AppTests */ = {
+		BDC4C3BD2BFF91390029127E /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BDC4C3912BFECF2D0029127E /* Card_Optimizer_AppTests.swift */,
+				BDC4C3812BFECF2B0029127E /* MainView.swift */,
+				BD911B4F2BFF9AEE00245B76 /* ProfileView.swift */,
+				BD911B532BFF9B3600245B76 /* NewCardView.swift */,
+				BD911B552BFF9B4E00245B76 /* LoginView.swift */,
+				BD911B572BFF9B6500245B76 /* RegisterView.swift */,
+				BD911B592BFF9B9C00245B76 /* CardItemView.swift */,
+				BD911B6F2BFF9EDC00245B76 /* CardListView.swift */,
+				BD911B712BFFABAA00245B76 /* HeaderView.swift */,
+				BD911B732BFFFCE300245B76 /* COButtonView.swift */,
+				BD710E5D2C45BBE80080ACFA /* CustomCardView.swift */,
 			);
-			path = "Card Optimizer AppTests";
+			path = Views;
 			sourceTree = "<group>";
 		};
-		BDC4C39A2BFECF2D0029127E /* Card Optimizer AppUITests */ = {
+		BDC4C3BE2BFF91510029127E /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				BDC4C39B2BFECF2D0029127E /* Card_Optimizer_AppUITests.swift */,
-				BDC4C39D2BFECF2D0029127E /* Card_Optimizer_AppUITestsLaunchTests.swift */,
+				BD911B5F2BFF9DD800245B76 /* MainViewViewModel.swift */,
+				BD911B612BFF9E5E00245B76 /* ProfileViewViewModel.swift */,
+				BD911B652BFF9E8800245B76 /* CardListViewViewModel.swift */,
+				BD911B672BFF9EA200245B76 /* NewCardViewViewModel.swift */,
+				BD911B692BFF9EAD00245B76 /* LoginViewViewModel.swift */,
+				BD911B6B2BFF9EB900245B76 /* RegisterViewViewModel.swift */,
+				BD911B6D2BFF9EC900245B76 /* CardItemViewViewModel.swift */,
+				BD911B7D2C17EEF600245B76 /* CardChooserViewViewModel.swift */,
+				BD710E5F2C45C1AB0080ACFA /* CustomCardViewViewModel.swift */,
 			);
-			path = "Card Optimizer AppUITests";
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BDC4C3BF2BFF91610029127E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD911B792C0045C500245B76 /* CardOption.swift */,
+				BD911B5B2BFF9D7D00245B76 /* User.swift */,
+				BD911B5D2BFF9D9000245B76 /* Card.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BDC4C3C02BFF917C0029127E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				BDC4C3832BFECF2C0029127E /* Assets.xcassets */,
+				BDC4C3BB2BFEDA1B0029127E /* GoogleService-Info.plist */,
+				BDC4C37F2BFECF2B0029127E /* Card_Optimizer_AppApp.swift */,
+				BD911B752C0019DA00245B76 /* Extensions.swift */,
+				BD911B772C003F4B00245B76 /* BankOptions.swift */,
+				BD911B7B2C00E67000245B76 /* Cards.swift */,
+				BD710E5B2C45A7A30080ACFA /* Launch Screen.storyboard */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,45 +211,19 @@
 			dependencies = (
 			);
 			name = "Card Optimizer App";
+			packageProductDependencies = (
+				BDC4C3AB2BFED0900029127E /* FirebaseAnalytics */,
+				BDC4C3AD2BFED0900029127E /* FirebaseAnalyticsOnDeviceConversion */,
+				BDC4C3AF2BFED0900029127E /* FirebaseAnalyticsSwift */,
+				BDC4C3B12BFED0900029127E /* FirebaseAnalyticsWithoutAdIdSupport */,
+				BDC4C3B32BFED0900029127E /* FirebaseAppCheck */,
+				BDC4C3B52BFED56D0029127E /* FirebaseAuth */,
+				BDC4C3B72BFED56D0029127E /* FirebaseFirestore */,
+				BDC4C3B92BFED56D0029127E /* FirebaseFirestoreSwift */,
+			);
 			productName = "Card Optimizer App";
 			productReference = BDC4C37C2BFECF2B0029127E /* Card Optimizer App.app */;
 			productType = "com.apple.product-type.application";
-		};
-		BDC4C38C2BFECF2D0029127E /* Card Optimizer AppTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BDC4C3A42BFECF2D0029127E /* Build configuration list for PBXNativeTarget "Card Optimizer AppTests" */;
-			buildPhases = (
-				BDC4C3892BFECF2D0029127E /* Sources */,
-				BDC4C38A2BFECF2D0029127E /* Frameworks */,
-				BDC4C38B2BFECF2D0029127E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BDC4C38F2BFECF2D0029127E /* PBXTargetDependency */,
-			);
-			name = "Card Optimizer AppTests";
-			productName = "Card Optimizer AppTests";
-			productReference = BDC4C38D2BFECF2D0029127E /* Card Optimizer AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		BDC4C3962BFECF2D0029127E /* Card Optimizer AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BDC4C3A72BFECF2D0029127E /* Build configuration list for PBXNativeTarget "Card Optimizer AppUITests" */;
-			buildPhases = (
-				BDC4C3932BFECF2D0029127E /* Sources */,
-				BDC4C3942BFECF2D0029127E /* Frameworks */,
-				BDC4C3952BFECF2D0029127E /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				BDC4C3992BFECF2D0029127E /* PBXTargetDependency */,
-			);
-			name = "Card Optimizer AppUITests";
-			productName = "Card Optimizer AppUITests";
-			productReference = BDC4C3972BFECF2D0029127E /* Card Optimizer AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -198,14 +238,6 @@
 					BDC4C37B2BFECF2B0029127E = {
 						CreatedOnToolsVersion = 15.4;
 					};
-					BDC4C38C2BFECF2D0029127E = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = BDC4C37B2BFECF2B0029127E;
-					};
-					BDC4C3962BFECF2D0029127E = {
-						CreatedOnToolsVersion = 15.4;
-						TestTargetID = BDC4C37B2BFECF2B0029127E;
-					};
 				};
 			};
 			buildConfigurationList = BDC4C3772BFECF2B0029127E /* Build configuration list for PBXProject "Card Optimizer App" */;
@@ -217,13 +249,14 @@
 				Base,
 			);
 			mainGroup = BDC4C3732BFECF2B0029127E;
+			packageReferences = (
+				BDC4C3AA2BFED0900029127E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = BDC4C37D2BFECF2B0029127E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				BDC4C37B2BFECF2B0029127E /* Card Optimizer App */,
-				BDC4C38C2BFECF2D0029127E /* Card Optimizer AppTests */,
-				BDC4C3962BFECF2D0029127E /* Card Optimizer AppUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,20 +268,8 @@
 			files = (
 				BDC4C3872BFECF2C0029127E /* Preview Assets.xcassets in Resources */,
 				BDC4C3842BFECF2C0029127E /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDC4C38B2BFECF2D0029127E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDC4C3952BFECF2D0029127E /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				BD710E5C2C45A7A30080ACFA /* Launch Screen.storyboard in Resources */,
+				BDC4C3BC2BFEDA1B0029127E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,42 +280,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDC4C3822BFECF2B0029127E /* ContentView.swift in Sources */,
+				BD911B562BFF9B4E00245B76 /* LoginView.swift in Sources */,
+				BD911B722BFFABAA00245B76 /* HeaderView.swift in Sources */,
+				BD911B5A2BFF9B9C00245B76 /* CardItemView.swift in Sources */,
+				BD911B6C2BFF9EB900245B76 /* RegisterViewViewModel.swift in Sources */,
+				BD911B782C003F4B00245B76 /* BankOptions.swift in Sources */,
+				BD911B7E2C17EEF600245B76 /* CardChooserViewViewModel.swift in Sources */,
+				BD911B682BFF9EA200245B76 /* NewCardViewViewModel.swift in Sources */,
+				BD911B602BFF9DD800245B76 /* MainViewViewModel.swift in Sources */,
+				BD911B662BFF9E8900245B76 /* CardListViewViewModel.swift in Sources */,
+				BDC4C3822BFECF2B0029127E /* MainView.swift in Sources */,
+				BD710E602C45C1AB0080ACFA /* CustomCardViewViewModel.swift in Sources */,
+				BD911B622BFF9E5E00245B76 /* ProfileViewViewModel.swift in Sources */,
+				BD911B7A2C0045C500245B76 /* CardOption.swift in Sources */,
+				BD710E5E2C45BBE80080ACFA /* CustomCardView.swift in Sources */,
+				BD911B582BFF9B6500245B76 /* RegisterView.swift in Sources */,
+				BD911B6E2BFF9EC900245B76 /* CardItemViewViewModel.swift in Sources */,
+				BD911B5C2BFF9D7D00245B76 /* User.swift in Sources */,
+				BD911B702BFF9EDC00245B76 /* CardListView.swift in Sources */,
+				BD911B6A2BFF9EAD00245B76 /* LoginViewViewModel.swift in Sources */,
+				BD911B502BFF9AEE00245B76 /* ProfileView.swift in Sources */,
+				BD911B7C2C00E67000245B76 /* Cards.swift in Sources */,
+				BD911B762C0019DA00245B76 /* Extensions.swift in Sources */,
+				BD911B5E2BFF9D9000245B76 /* Card.swift in Sources */,
+				BD911B742BFFFCE400245B76 /* COButtonView.swift in Sources */,
 				BDC4C3802BFECF2B0029127E /* Card_Optimizer_AppApp.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDC4C3892BFECF2D0029127E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDC4C3922BFECF2D0029127E /* Card_Optimizer_AppTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BDC4C3932BFECF2D0029127E /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				BDC4C39E2BFECF2D0029127E /* Card_Optimizer_AppUITestsLaunchTests.swift in Sources */,
-				BDC4C39C2BFECF2D0029127E /* Card_Optimizer_AppUITests.swift in Sources */,
+				BD911B542BFF9B3600245B76 /* NewCardView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		BDC4C38F2BFECF2D0029127E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BDC4C37B2BFECF2B0029127E /* Card Optimizer App */;
-			targetProxy = BDC4C38E2BFECF2D0029127E /* PBXContainerItemProxy */;
-		};
-		BDC4C3992BFECF2D0029127E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BDC4C37B2BFECF2B0029127E /* Card Optimizer App */;
-			targetProxy = BDC4C3982BFECF2D0029127E /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		BDC4C39F2BFECF2D0029127E /* Debug */ = {
@@ -425,9 +440,15 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Card Optimizer App/Preview Content\"";
+				DEVELOPMENT_TEAM = 4L979UQFJY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Card Optimizer";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -435,8 +456,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "seanhyu.Card-Optimizer-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -450,9 +474,15 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Card Optimizer App/Preview Content\"";
+				DEVELOPMENT_TEAM = 4L979UQFJY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Card Optimizer";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationLandscapeLeft;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -460,76 +490,11 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "seanhyu.Card-Optimizer-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		BDC4C3A52BFECF2D0029127E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "seanhyu.Card-Optimizer-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Card Optimizer App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Card Optimizer App";
-			};
-			name = Debug;
-		};
-		BDC4C3A62BFECF2D0029127E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 14.5;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "seanhyu.Card-Optimizer-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Card Optimizer App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Card Optimizer App";
-			};
-			name = Release;
-		};
-		BDC4C3A82BFECF2D0029127E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "seanhyu.Card-Optimizer-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Card Optimizer App";
-			};
-			name = Debug;
-		};
-		BDC4C3A92BFECF2D0029127E /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "seanhyu.Card-Optimizer-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "Card Optimizer App";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -554,25 +519,61 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		BDC4C3A42BFECF2D0029127E /* Build configuration list for PBXNativeTarget "Card Optimizer AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDC4C3A52BFECF2D0029127E /* Debug */,
-				BDC4C3A62BFECF2D0029127E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BDC4C3A72BFECF2D0029127E /* Build configuration list for PBXNativeTarget "Card Optimizer AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				BDC4C3A82BFECF2D0029127E /* Debug */,
-				BDC4C3A92BFECF2D0029127E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BDC4C3AA2BFED0900029127E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.26.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BDC4C3AB2BFED0900029127E /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDC4C3AA2BFED0900029127E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		BDC4C3AD2BFED0900029127E /* FirebaseAnalyticsOnDeviceConversion */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDC4C3AA2BFED0900029127E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsOnDeviceConversion;
+		};
+		BDC4C3AF2BFED0900029127E /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDC4C3AA2BFED0900029127E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		BDC4C3B12BFED0900029127E /* FirebaseAnalyticsWithoutAdIdSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDC4C3AA2BFED0900029127E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsWithoutAdIdSupport;
+		};
+		BDC4C3B32BFED0900029127E /* FirebaseAppCheck */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDC4C3AA2BFED0900029127E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAppCheck;
+		};
+		BDC4C3B52BFED56D0029127E /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDC4C3AA2BFED0900029127E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		BDC4C3B72BFED56D0029127E /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDC4C3AA2BFED0900029127E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		BDC4C3B92BFED56D0029127E /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BDC4C3AA2BFED0900029127E /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = BDC4C3742BFECF2B0029127E /* Project object */;
 }

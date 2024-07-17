@@ -6,12 +6,20 @@
 //
 
 import SwiftUI
+import FirebaseCore
+
+
 
 @main
 struct Card_Optimizer_AppApp: App {
+    init() {
+        FirebaseApp.configure()
+      }
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
+
+
