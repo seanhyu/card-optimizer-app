@@ -7,10 +7,13 @@
 
 import SwiftUI
 
+// View for each card in the CardListView
 struct CardItemView: View {
-    @StateObject var viewModel = ProfileViewViewModel()
+    
+    // initiate item variable to the card passed in
     let item: cardItem
     var body: some View {
+        // display the credit card name and date joined
         VStack(alignment: .leading) {
             Text(item.card)
                 

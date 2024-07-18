@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// View for the header on the login page
 struct HeaderView: View {
     let title: String
     let subtitle: String

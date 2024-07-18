@@ -7,7 +7,7 @@
 
 import Foundation
 
-// Struct for credit cards that stores all important information needed for the app
+// struct for credit cards that stores all important information needed for the app
 
 struct cardItem: Codable, Identifiable {
     let id: String

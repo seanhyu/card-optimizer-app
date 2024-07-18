@@ -7,6 +7,7 @@
 import FirebaseAuth
 import Foundation
 
+// ViewModel for the LoginView
 class LoginViewViewModel: ObservableObject {
     
     // initialize variables for user email, pasword, and an error message
@@ -16,7 +17,7 @@ class LoginViewViewModel: ObservableObject {
     
     init() {}
     
-    // function for allowing the user to login
+    // function for allowing the user to login that populates the errorMessage variable if the login attempt fails and returns nothing
     
     func login() {
         
@@ -28,6 +29,7 @@ class LoginViewViewModel: ObservableObject {
         }
     }
     
+    // this function guards against an empty or invalid email address and password and returns true if all tests pass
     private func validate() -> Bool {
         // set errorMessage to a blank string and determine if there is an error
         errorMessage = ""

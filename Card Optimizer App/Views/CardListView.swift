@@ -7,11 +7,12 @@
 import FirebaseFirestoreSwift
 import SwiftUI
 
+// View for the list of cards
 struct CardListView: View {
-    // instantiate StateObject variable for the corresponding ViewModel
+    // initiate StateObject variable for the corresponding ViewModel
     @StateObject var viewModel: CardListViewViewModel
     
-    // Instantiate variable to store all user credit cards
+    // instantiate variable to store all user credit cards
     @FirestoreQuery var items: [cardItem]
     
     
@@ -28,8 +29,9 @@ struct CardListView: View {
     var body: some View {
         NavigationView {
             VStack {
+                // list with sections that each pull the best cards from each category from the corresponding functions and displays them
                 List {
-                    // Pull the best cards from each category from the corresponding functions and print
+                    
                     Section(header: Text("Best Card for Food")) {
                         Text(viewModel.bestFood(items:items))
                         }
@@ -47,7 +49,8 @@ struct CardListView: View {
                     Section(header: Text("Best Default Card")) {
                         Text(viewModel.bestDefault(items:items))
                         }
-
+                    
+                    // displays all credit cards with annual fees
                     Section(header: Text("Cards with Annual Fees")) {
                         ForEach(viewModel.feeCards(items:items)) {item in
                             VStack(alignment: .leading) {
@@ -61,12 +64,12 @@ struct CardListView: View {
                         }
                     }
                     
-                    // List all credit cards
+                    // lists all credit cards
                     Section(header: Text("All Cards")) {
                         ForEach(items) {item in
                             CardItemView(item: item)
                             
-                            // add swipeActions to allow user to delete credit cards
+                            // adds swipeActions to allow user to delete credit cards
                                 .swipeActions {
                                     Button {
                                         viewModel.delete(id: item.id)
@@ -80,10 +83,10 @@ struct CardListView: View {
                 }
                 
             }
-            // Title of the page
+            // title of the page
             .navigationTitle("Cards")
             .toolbar {
-                // Button to allow user to add new cards
+                // button to allow user to add new cards
                 Button {
                     // if button is clicked, set the variable for showingNewCardView to true
                     viewModel.showingNewCardView = true

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// struct for users that stores name, email, and date joined
 struct User: Codable {
     let id: String
     let name: String

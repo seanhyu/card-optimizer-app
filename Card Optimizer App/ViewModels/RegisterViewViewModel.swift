@@ -8,7 +8,10 @@ import FirebaseAuth
 import FirebaseFirestore
 import Foundation
 
+// viewModel for the RegisterView
+
 class RegisterViewViewModel: ObservableObject {
+    
     // instantiate variables for name, email, password for the user as well as an error message, and set their values all to an empty string
     
     @Published var name = ""
@@ -18,7 +21,7 @@ class RegisterViewViewModel: ObservableObject {
     
     init() {}
     
-    // this function allows users to register
+    // this function allows users to register and returns nothing
     
     func register() {
         
@@ -38,7 +41,7 @@ class RegisterViewViewModel: ObservableObject {
         }
     }
     
-    // this function adds the new user to the firestore database
+    // this function adds the new user to the firestore database and returns nothing
     
     private func insertUserRecord(id: String) {
         let newUser = User(id: id,
@@ -51,7 +54,7 @@ class RegisterViewViewModel: ObservableObject {
             .setData(newUser.asDictionary())
     }
     
-    // this function checks if all fields are filled correctly, and returns a non-empty error message if not filled correctly
+    // this function checks if all fields are filled correctly, and returns False and a non-empty error message if not filled correctly
     
     private func validate() -> Bool {
         

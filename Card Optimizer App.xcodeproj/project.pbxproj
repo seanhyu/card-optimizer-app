@@ -23,15 +23,10 @@
 		BD911B682BFF9EA200245B76 /* NewCardViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B672BFF9EA200245B76 /* NewCardViewViewModel.swift */; };
 		BD911B6A2BFF9EAD00245B76 /* LoginViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B692BFF9EAD00245B76 /* LoginViewViewModel.swift */; };
 		BD911B6C2BFF9EB900245B76 /* RegisterViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B6B2BFF9EB900245B76 /* RegisterViewViewModel.swift */; };
-		BD911B6E2BFF9EC900245B76 /* CardItemViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B6D2BFF9EC900245B76 /* CardItemViewViewModel.swift */; };
 		BD911B702BFF9EDC00245B76 /* CardListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B6F2BFF9EDC00245B76 /* CardListView.swift */; };
 		BD911B722BFFABAA00245B76 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B712BFFABAA00245B76 /* HeaderView.swift */; };
 		BD911B742BFFFCE400245B76 /* COButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B732BFFFCE300245B76 /* COButtonView.swift */; };
 		BD911B762C0019DA00245B76 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B752C0019DA00245B76 /* Extensions.swift */; };
-		BD911B782C003F4B00245B76 /* BankOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B772C003F4B00245B76 /* BankOptions.swift */; };
-		BD911B7A2C0045C500245B76 /* CardOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B792C0045C500245B76 /* CardOption.swift */; };
-		BD911B7C2C00E67000245B76 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B7B2C00E67000245B76 /* Cards.swift */; };
-		BD911B7E2C17EEF600245B76 /* CardChooserViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD911B7D2C17EEF600245B76 /* CardChooserViewViewModel.swift */; };
 		BDC4C3802BFECF2B0029127E /* Card_Optimizer_AppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4C37F2BFECF2B0029127E /* Card_Optimizer_AppApp.swift */; };
 		BDC4C3822BFECF2B0029127E /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC4C3812BFECF2B0029127E /* MainView.swift */; };
 		BDC4C3842BFECF2C0029127E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC4C3832BFECF2C0029127E /* Assets.xcassets */; };
@@ -64,15 +59,10 @@
 		BD911B672BFF9EA200245B76 /* NewCardViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewCardViewViewModel.swift; sourceTree = "<group>"; };
 		BD911B692BFF9EAD00245B76 /* LoginViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewViewModel.swift; sourceTree = "<group>"; };
 		BD911B6B2BFF9EB900245B76 /* RegisterViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewViewModel.swift; sourceTree = "<group>"; };
-		BD911B6D2BFF9EC900245B76 /* CardItemViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardItemViewViewModel.swift; sourceTree = "<group>"; };
 		BD911B6F2BFF9EDC00245B76 /* CardListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardListView.swift; sourceTree = "<group>"; };
 		BD911B712BFFABAA00245B76 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		BD911B732BFFFCE300245B76 /* COButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = COButtonView.swift; sourceTree = "<group>"; };
 		BD911B752C0019DA00245B76 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		BD911B772C003F4B00245B76 /* BankOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BankOptions.swift; sourceTree = "<group>"; };
-		BD911B792C0045C500245B76 /* CardOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardOption.swift; sourceTree = "<group>"; };
-		BD911B7B2C00E67000245B76 /* Cards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
-		BD911B7D2C17EEF600245B76 /* CardChooserViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardChooserViewViewModel.swift; sourceTree = "<group>"; };
 		BDC4C37C2BFECF2B0029127E /* Card Optimizer App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Card Optimizer App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC4C37F2BFECF2B0029127E /* Card_Optimizer_AppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card_Optimizer_AppApp.swift; sourceTree = "<group>"; };
 		BDC4C3812BFECF2B0029127E /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
@@ -164,8 +154,6 @@
 				BD911B672BFF9EA200245B76 /* NewCardViewViewModel.swift */,
 				BD911B692BFF9EAD00245B76 /* LoginViewViewModel.swift */,
 				BD911B6B2BFF9EB900245B76 /* RegisterViewViewModel.swift */,
-				BD911B6D2BFF9EC900245B76 /* CardItemViewViewModel.swift */,
-				BD911B7D2C17EEF600245B76 /* CardChooserViewViewModel.swift */,
 				BD710E5F2C45C1AB0080ACFA /* CustomCardViewViewModel.swift */,
 			);
 			path = ViewModels;
@@ -174,7 +162,6 @@
 		BDC4C3BF2BFF91610029127E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BD911B792C0045C500245B76 /* CardOption.swift */,
 				BD911B5B2BFF9D7D00245B76 /* User.swift */,
 				BD911B5D2BFF9D9000245B76 /* Card.swift */,
 			);
@@ -188,8 +175,6 @@
 				BDC4C3BB2BFEDA1B0029127E /* GoogleService-Info.plist */,
 				BDC4C37F2BFECF2B0029127E /* Card_Optimizer_AppApp.swift */,
 				BD911B752C0019DA00245B76 /* Extensions.swift */,
-				BD911B772C003F4B00245B76 /* BankOptions.swift */,
-				BD911B7B2C00E67000245B76 /* Cards.swift */,
 				BD710E5B2C45A7A30080ACFA /* Launch Screen.storyboard */,
 			);
 			path = Other;
@@ -284,23 +269,18 @@
 				BD911B722BFFABAA00245B76 /* HeaderView.swift in Sources */,
 				BD911B5A2BFF9B9C00245B76 /* CardItemView.swift in Sources */,
 				BD911B6C2BFF9EB900245B76 /* RegisterViewViewModel.swift in Sources */,
-				BD911B782C003F4B00245B76 /* BankOptions.swift in Sources */,
-				BD911B7E2C17EEF600245B76 /* CardChooserViewViewModel.swift in Sources */,
 				BD911B682BFF9EA200245B76 /* NewCardViewViewModel.swift in Sources */,
 				BD911B602BFF9DD800245B76 /* MainViewViewModel.swift in Sources */,
 				BD911B662BFF9E8900245B76 /* CardListViewViewModel.swift in Sources */,
 				BDC4C3822BFECF2B0029127E /* MainView.swift in Sources */,
 				BD710E602C45C1AB0080ACFA /* CustomCardViewViewModel.swift in Sources */,
 				BD911B622BFF9E5E00245B76 /* ProfileViewViewModel.swift in Sources */,
-				BD911B7A2C0045C500245B76 /* CardOption.swift in Sources */,
 				BD710E5E2C45BBE80080ACFA /* CustomCardView.swift in Sources */,
 				BD911B582BFF9B6500245B76 /* RegisterView.swift in Sources */,
-				BD911B6E2BFF9EC900245B76 /* CardItemViewViewModel.swift in Sources */,
 				BD911B5C2BFF9D7D00245B76 /* User.swift in Sources */,
 				BD911B702BFF9EDC00245B76 /* CardListView.swift in Sources */,
 				BD911B6A2BFF9EAD00245B76 /* LoginViewViewModel.swift in Sources */,
 				BD911B502BFF9AEE00245B76 /* ProfileView.swift in Sources */,
-				BD911B7C2C00E67000245B76 /* Cards.swift in Sources */,
 				BD911B762C0019DA00245B76 /* Extensions.swift in Sources */,
 				BD911B5E2BFF9D9000245B76 /* Card.swift in Sources */,
 				BD911B742BFFFCE400245B76 /* COButtonView.swift in Sources */,

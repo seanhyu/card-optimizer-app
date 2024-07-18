@@ -13,6 +13,7 @@ import FirebaseCore
 @main
 struct Card_Optimizer_AppApp: App {
     init() {
+        // initializes the FireBase App
         FirebaseApp.configure()
       }
     var body: some Scene {

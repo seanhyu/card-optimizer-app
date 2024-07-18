@@ -7,6 +7,7 @@
 
 import Foundation
 
+// this extension allows us to enter credit cards to the firebase database as a dictionary
 extension Encodable {
     func asDictionary() -> [String: Any] {
         guard let data = try? JSONEncoder().encode(self) else {

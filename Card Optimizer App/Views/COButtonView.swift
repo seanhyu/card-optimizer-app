@@ -7,7 +7,11 @@
 
 import SwiftUI
 
+// View for the large blue buttons used for saving and logging in
+
 struct COButtonView: View {
+    
+    // takes in parameters for title, background color, and the action after the button is clicked
     let title: String
     let background: Color
     let action: () -> Void

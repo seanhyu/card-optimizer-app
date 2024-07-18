@@ -8,16 +8,25 @@
 import Foundation
 import FirebaseFirestore
 
+// ViewModel for the CardListView
+
 class CardListViewViewModel: ObservableObject {
+    
+    // initiate variable that determines whether this view should be shown to false
     @Published var showingNewCardView = false
+    
+    // instantiate variable for userId
     private let userId: String
     
     
     
     init(userId: String) {
+        
+        // get the userId
         self.userId = userId
     }
     
+    // this function deletes a card from the user's database and returns nothing
     func delete(id: String) {
         let db = Firestore.firestore()
         db.collection("users")
@@ -28,7 +37,7 @@ class CardListViewViewModel: ObservableObject {
         
     }
     
-    
+    // this function iterates through the user's cards to and returns the credit card with the highest food earnings
     func bestFood(items: [cardItem]) -> String {
         var foodCashBack = 0.0
         var foodCard = "-"
@@ -41,6 +50,7 @@ class CardListViewViewModel: ObservableObject {
         return foodCard
     }
     
+    // this function iterates through the user's cards and returns the credit card with the highest default earnings
     func bestDefault(items: [cardItem]) -> String {
         var defaultCashBack = 0.0
         var defaultCard = "-"
@@ -53,6 +63,7 @@ class CardListViewViewModel: ObservableObject {
         return defaultCard
     }
     
+    // this function iterates through the user's cards and returns the credit card with the highest grocery earnings
     func bestGroceries(items: [cardItem]) -> String {
         var groceriesCashBack = 0.0
         var groceriesCard = "-"
@@ -65,6 +76,7 @@ class CardListViewViewModel: ObservableObject {
         return groceriesCard
     }
     
+    // this function iterates through the user's cards and returns the credit card with the highest gas earnings
     func bestGas(items: [cardItem]) -> String {
         var gasCashBack = 0.0
         var gasCard = "-"
@@ -77,6 +89,7 @@ class CardListViewViewModel: ObservableObject {
         return gasCard
     }
     
+    // this function iterates through the user's cards and returns the credit cards with fees sorted in decreasing order
     func feeCards(items: [cardItem]) -> [cardItem] {
         var cardList: [cardItem] = []
         for item in items {

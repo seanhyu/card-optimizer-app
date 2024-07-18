@@ -9,12 +9,16 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 
+// ViewModel for the ProfileView
 class ProfileViewViewModel: ObservableObject {
     init() {
         
     }
+    
+    // variable ot store the user, initially set to Nil
     @Published var user: User? = nil
     
+    // function for fetching the current userId if a user is logged in that populates the user variable if successful and returns nothing
     func fetchUser() {
         guard let userId = Auth.auth().currentUser?.uid else {
             return
@@ -33,6 +37,8 @@ class ProfileViewViewModel: ObservableObject {
             }
         }
     }
+    
+    // function to allow user to log out and prints an error otherwise
     
     func logOut() {
         do {

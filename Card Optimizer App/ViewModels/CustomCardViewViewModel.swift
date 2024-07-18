@@ -9,7 +9,10 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 
+// ViewModel for the CustomCardView
 class CustomCardViewViewModel: ObservableObject {
+    
+    // initiate variables for all card information to default values
     @Published var bank = ""
     @Published var card = ""
     @Published var joinDate = Date()
@@ -26,8 +29,13 @@ class CustomCardViewViewModel: ObservableObject {
         
     }
     
+    // function that attempts to save the new credit card and populates the errorMessage variable if it fails; returns nothing
     func save()  {
+        
+        // set errorMessage to nothing first
         errorMessage = ""
+        
+        // check if the bank, card, or fee fields of the form are empty and populate error message accordingly
         guard !bank.trimmingCharacters(in: .whitespaces).isEmpty,
               !card.trimmingCharacters(in: .whitespaces).isEmpty,
               !fee.trimmingCharacters(in: .whitespaces).isEmpty
@@ -36,12 +44,14 @@ class CustomCardViewViewModel: ObservableObject {
             return
         }
         
+        // check if the fee is a number
         guard let numFee = Int(fee)
         else {
-            errorMessage="Not a valid fee."
+            errorMessage="Fee must be a positive number"
             return
         }
         
+        // check if the fee is positive or 0
         guard numFee >= 0 else {
             errorMessage="Fee cannot be negative"
             return
@@ -51,12 +61,12 @@ class CustomCardViewViewModel: ObservableObject {
         guard let uId = Auth.auth().currentUser?.uid else {
             return
         }
-        
-        // create model
         let newId = UUID().uuidString
         
+        // set cardName variable to the concatenation of the bank and card variables with a space
         let cardName = bank + " " + card
         
+        // assign card information variables accordingly
         let newItem = cardItem(
             id: newId,
             card: cardName,
@@ -71,7 +81,7 @@ class CustomCardViewViewModel: ObservableObject {
         )
         
         
-        // save model
+        // save new credit card to the database under the user's document
         let db = Firestore.firestore()
         
         db.collection("users")

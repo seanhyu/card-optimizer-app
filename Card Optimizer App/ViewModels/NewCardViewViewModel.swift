@@ -9,21 +9,20 @@ import Foundation
 import FirebaseAuth
 import FirebaseFirestore
 
+// ViewModel for the NewCardView
 class NewCardViewViewModel: ObservableObject {
+    
+    // instantiate and initialize variables for bank, card, and joinDate
     
     @Published var bank = "American Express"
     @Published var card = "-"
     @Published var joinDate = Date()
     
     init() {
-        
     }
-    @Published var amexOptions: [String] = ["Gold","Platinum","Green"]
-    @Published var chaseOptions: [String] = ["Freedom Flex", "Freedom Unlimited", "Sapphire Preferred", "Sapphire Reserve"]
-    @Published var discoverOptions: [String] = ["It"]
-    @Published var capitalOneOptions: [String] = ["Venture Rewards", "Venture X Rewards", "SavorOne", "QuickSilver"]
-    @Published var wfOptions: [String] = ["Bilt Mastercard"]
-    @Published var citiOptions: [String] = ["Double Cash","Custom Cash","Strata Premier"]
+    
+    // instantiate variables for credit card earnings categories and set to default values
+    
     var food = 0.01
     var groceries = 0.01
     var travel = 0.01
@@ -32,27 +31,29 @@ class NewCardViewViewModel: ObservableObject {
     var fee = 0
     
    
-    
+    // this function returns the card options based on the bank chosen 
     
     func options() -> Array<String> {
         switch bank {
         case "American Express":
-            return amexOptions
+            return ["Gold","Platinum","Green"]
         case "Chase":
-            return chaseOptions
+            return ["Freedom Flex", "Freedom Unlimited", "Sapphire Preferred", "Sapphire Reserve"]
         case "Discover":
-            return discoverOptions
+            return ["It"]
         case "Capital One":
-            return capitalOneOptions
+            return ["Venture Rewards", "Venture X Rewards", "SavorOne", "QuickSilver"]
         case "Wells Fargo":
-            return wfOptions
+            return ["Bilt Mastercard"]
         case "Citi":
-            return citiOptions
+            return ["Double Cash","Custom Cash","Strata Premier"]
         default:
             return [""]
         }
         
     }
+    
+    // this function saves the newly added credit card to the user's "file" within the database and returns nothing
     
     func save() {
         
@@ -60,9 +61,10 @@ class NewCardViewViewModel: ObservableObject {
         guard let uId = Auth.auth().currentUser?.uid else {
             return
         }
-        
-        // create model
         let newId = UUID().uuidString
+        
+        // assign default credit cards in scenario where user doesn't click on the default credit card choice
+        
         if card == "-" {
             switch bank {
             case "American Express":
@@ -82,8 +84,10 @@ class NewCardViewViewModel: ObservableObject {
                 card = "-"
             }
         }
+        // initiate variable for cardName equal to the concatenation of the bank name and card name
         let cardName = bank + " " + card
         
+        // assign variables for card earnings rates based on credit card
         switch card {
             case "Gold":
                 food = 0.04
@@ -199,6 +203,8 @@ class NewCardViewViewModel: ObservableObject {
                 fee = 0
         }
         
+        // create new cardItem for the new card with the supplied information
+        
         let newItem = cardItem(
             id: newId,
             card: cardName,
@@ -213,9 +219,10 @@ class NewCardViewViewModel: ObservableObject {
         )
         
         
-        // save model
+        // initiate variable db to the firebase database
         let db = Firestore.firestore()
         
+        // save the newly added card to the database in the user's document
         db.collection("users")
             .document(uId)
             .collection("cards")
