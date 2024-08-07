@@ -15,8 +15,10 @@ struct HeaderView: View {
     
     var body: some View {
         ZStack {
+            // Blue Rectangle at top
             RoundedRectangle(cornerRadius: 0)
                 .foregroundColor(background)
+            // Text
             VStack {
                 Text(title)
                     .font(.system(size: 40))

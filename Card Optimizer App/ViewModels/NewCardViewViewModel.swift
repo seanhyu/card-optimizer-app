@@ -95,7 +95,7 @@ class NewCardViewViewModel: ObservableObject {
                 travel = 0.03
                 gas = 0.01
                 everything = 0.01
-                fee = 250
+                fee = 325
             case "Platinum":
                 food = 0.01
                 groceries = 0.01
