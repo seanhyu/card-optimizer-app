@@ -33,8 +33,9 @@ class RegisterViewViewModel: ObservableObject {
         
         // create user using FirebaseAuth and add to the firebase using the insertUserRecord function
         
-        Auth.auth().createUser(withEmail: email, password: password) {[weak self] result,error in
-            guard let userId = result?.user.uid else {
+        Auth.auth().createUser(withEmail: email, password: password) {[weak self]result,error in
+            guard let userId = result?.user.uid, error == nil else {
+                self?.errorMessage = "User already exists"
                 return
             }
             self?.insertUserRecord(id: userId)
@@ -84,6 +85,8 @@ class RegisterViewViewModel: ObservableObject {
             errorMessage="Password must contain at least 8 characters."
             return false
         }
+        
+        // check if user already exists
         
         // return true if all tests passed
         return true
