@@ -14,11 +14,11 @@ class MainViewViewModel: ObservableObject {
     // instantiate and initiate variable for currentUserId to an empty string
     @Published var currentUserId: String = ""
     
-    // instantiate handler to track when user logs in
+    // instantiate handler to track change in login state
     private var handler: AuthStateDidChangeListenerHandle?
     
     init() {
-        // attempt to assign currentUserId and move to main thread
+        // attempt to assign currentUserId and resets the app using the new login status
         self.handler = Auth.auth().addStateDidChangeListener{ [weak self] _, user in
             DispatchQueue.main.async {
                 self?.currentUserId = user?.uid ?? ""
