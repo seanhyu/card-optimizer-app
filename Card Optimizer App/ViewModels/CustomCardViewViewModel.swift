@@ -67,7 +67,7 @@ class CustomCardViewViewModel: ObservableObject {
         let cardName = bank + " " + card
         
         // assign card information variables accordingly
-        let newItem = cardItem(
+        let newItem = Card(
             id: newId,
             card: cardName,
             bank: bank,

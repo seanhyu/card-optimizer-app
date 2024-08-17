@@ -11,7 +11,7 @@ import SwiftUI
 struct CardItemView: View {
     
     // initiate item variable to the card passed in
-    let item: cardItem
+    let item: Card
     var body: some View {
         // display the credit card name and date joined
         VStack(alignment: .leading) {

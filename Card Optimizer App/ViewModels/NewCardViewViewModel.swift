@@ -203,9 +203,9 @@ class NewCardViewViewModel: ObservableObject {
                 fee = 0
         }
         
-        // create new cardItem for the new card with the supplied information
+        // create new Card for the new card with the supplied information
         
-        let newItem = cardItem(
+        let newItem = Card(
             id: newId,
             card: cardName,
             bank: bank,

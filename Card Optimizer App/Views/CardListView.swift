@@ -13,7 +13,7 @@ struct CardListView: View {
     @StateObject var viewModel: CardListViewViewModel
     
     // instantiate variable to store all user credit cards
-    @FirestoreQuery var items: [cardItem]
+    @FirestoreQuery var items: [Card]
     
     
     init(userId: String) {

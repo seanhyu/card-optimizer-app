@@ -9,7 +9,7 @@ import Foundation
 
 // struct for credit cards that stores all important information needed for the app
 
-struct cardItem: Codable, Identifiable {
+struct Card: Codable, Identifiable {
     let id: String
     let card: String
     let bank: String

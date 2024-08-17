@@ -38,7 +38,7 @@ class CardListViewViewModel: ObservableObject {
     }
     
     // this function iterates through the user's cards to and returns the credit card with the highest food earnings
-    func bestFood(items: [cardItem]) -> String {
+    func bestFood(items: [Card]) -> String {
         var foodCashBack = 0.0
         var foodCard = "-"
         for card in items {
@@ -51,7 +51,7 @@ class CardListViewViewModel: ObservableObject {
     }
     
     // this function iterates through the user's cards and returns the credit card with the highest default earnings
-    func bestDefault(items: [cardItem]) -> String {
+    func bestDefault(items: [Card]) -> String {
         var defaultCashBack = 0.0
         var defaultCard = "-"
         for card in items {
@@ -64,7 +64,7 @@ class CardListViewViewModel: ObservableObject {
     }
     
     // this function iterates through the user's cards and returns the credit card with the highest grocery earnings
-    func bestGroceries(items: [cardItem]) -> String {
+    func bestGroceries(items: [Card]) -> String {
         var groceriesCashBack = 0.0
         var groceriesCard = "-"
         for card in items {
@@ -77,7 +77,7 @@ class CardListViewViewModel: ObservableObject {
     }
     
     // this function iterates through the user's cards and returns the credit card with the highest gas earnings
-    func bestGas(items: [cardItem]) -> String {
+    func bestGas(items: [Card]) -> String {
         var gasCashBack = 0.0
         var gasCard = "-"
         for card in items {
@@ -90,8 +90,8 @@ class CardListViewViewModel: ObservableObject {
     }
     
     // this function iterates through the user's cards and returns the credit cards with fees sorted in decreasing order
-    func feeCards(items: [cardItem]) -> [cardItem] {
-        var cardList: [cardItem] = []
+    func feeCards(items: [Card]) -> [Card] {
+        var cardList: [Card] = []
         for item in items {
             if item.fee > 0 {
                 cardList.append(item)
