@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     
     // variable for the relevant ViewModel
-    @StateObject var viewModel = LoginViewViewModel()
+    @State var viewModel = LoginViewViewModel()
     var body: some View {
         NavigationView {
             VStack {

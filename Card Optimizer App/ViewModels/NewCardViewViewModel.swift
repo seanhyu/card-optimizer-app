@@ -10,13 +10,13 @@ import FirebaseAuth
 import FirebaseFirestore
 
 // ViewModel for the NewCardView
-class NewCardViewViewModel: ObservableObject {
+@Observable class NewCardViewViewModel {
     
     // instantiate and initialize variables for bank, card, and joinDate
     
-    @Published var bank = "American Express"
-    @Published var card = "-"
-    @Published var joinDate = Date()
+    var bank = "American Express"
+    var card = "-"
+    var joinDate = Date()
     
     init() {
     }

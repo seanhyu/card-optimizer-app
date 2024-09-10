@@ -10,20 +10,20 @@ import FirebaseAuth
 import FirebaseFirestore
 
 // ViewModel for the CustomCardView
-class CustomCardViewViewModel: ObservableObject {
+@Observable class CustomCardViewViewModel {
     
     // initiate variables for all card information to default values
-    @Published var bank = ""
-    @Published var card = ""
-    @Published var joinDate = Date()
-    @Published var showAlert = false
-    @Published var food: Double = 0.01
-    @Published var groceries: Double = 0.01
-    @Published var travel: Double = 0.01
-    @Published var gas: Double = 0.01
-    @Published var everything: Double = 0.01
-    @Published var fee = ""
-    @Published var errorMessage = ""
+    var bank = ""
+    var card = ""
+    var joinDate = Date()
+    var showAlert = false
+    var food: Double = 0.01
+    var groceries: Double = 0.01
+    var travel: Double = 0.01
+    var gas: Double = 0.01
+    var everything: Double = 0.01
+    var fee = ""
+    var errorMessage = ""
     
     init() {
         

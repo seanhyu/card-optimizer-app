@@ -10,8 +10,8 @@ import SwiftUI
 // view for user profile information
 struct ProfileView: View {
     
-    // initiate StateObject variable for the corresponding ViewModel
-    @StateObject var viewModel = ProfileViewViewModel()
+    // initiate variable for the corresponding ViewModel
+    @State var viewModel = ProfileViewViewModel()
     
     
     var body: some View {

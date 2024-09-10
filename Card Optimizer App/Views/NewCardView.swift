@@ -12,7 +12,7 @@ import SwiftUI
 struct NewCardView: View {
     
     // variable for accessing view model information
-    @StateObject var viewModel = NewCardViewViewModel()
+    @State var viewModel = NewCardViewViewModel()
     
     // variable for determining if this view should be shown
     @Binding var newCardPresented: Bool

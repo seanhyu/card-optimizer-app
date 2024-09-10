@@ -10,13 +10,13 @@ import FirebaseAuth
 import FirebaseFirestore
 
 // ViewModel for the ProfileView
-class ProfileViewViewModel: ObservableObject {
+@Observable class ProfileViewViewModel {
     init() {
         
     }
     
     // variable ot store the user, initially set to Nil
-    @Published var user: User? = nil
+     var user: User? = nil
     
     // function for fetching the current userId if a user is logged in that populates the user variable if successful and returns nothing
     func fetchUser() {

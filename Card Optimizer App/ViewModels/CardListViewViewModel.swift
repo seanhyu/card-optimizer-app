@@ -7,28 +7,52 @@
 
 import Foundation
 import FirebaseFirestore
+import FirebaseFirestoreSwift
+import FirebaseAuth
+
 
 // ViewModel for the CardListView
 
-class CardListViewViewModel: ObservableObject {
+@Observable class CardListViewViewModel {
     
     // initiate variable that determines whether this view should be shown to false
-    @Published var showingNewCardView = false
+    var showingNewCardView = false
+    var cards: [Card] = []
+    var userId: String
     
-    // instantiate variable for userId
-    private let userId: String
-    
-    
-    
-    init(userId: String) {
-        
-        // get the userId
-        self.userId = userId
+    init() {
+        self.userId = Auth.auth().currentUser?.uid ?? ""
+    }
+    // this function fetches the latest user credit card list 
+    func fetchCards() async {
+        let userId = self.userId
+        let db = Firestore.firestore()
+        self.cards = []
+        do {
+            let querySnapshot = try await db.collection("users").document(userId).collection("cards").getDocuments()
+            for document in querySnapshot.documents {
+                let data = document.data()
+                let credit_card = Card(id: data["id"] as? String ?? "",
+                                card: data["card"] as? String ?? "",
+                                bank: data["bank"] as? String ?? "",
+                                joinDate: data["joinDate"] as? TimeInterval ?? 0,
+                                food: data["food"] as? Double ?? 0,
+                                groceries: data["groceries"] as? Double ?? 0,
+                                travel: data["travel"] as? Double ?? 0,
+                                gas: data["gas"] as? Double ?? 0,
+                                everything: data["everything"] as? Double ?? 0,
+                                fee: data["fee"] as? Int ?? 0)
+                self.cards.append(credit_card)
+            }
+        } catch {
+            print("Error getting documents: \(error)")
+        }
     }
     
     // this function deletes a card from the user's database and returns nothing
     func delete(id: String) {
         let db = Firestore.firestore()
+        let userId = self.userId
         db.collection("users")
             .document(userId)
             .collection("cards")
@@ -38,7 +62,8 @@ class CardListViewViewModel: ObservableObject {
     }
     
     // this function iterates through the user's cards to and returns the credit card with the highest food earnings
-    func bestFood(items: [Card]) -> String {
+    func bestFood() -> String {
+        let items = self.cards
         var foodCashBack = 0.0
         var foodCard = "-"
         for card in items {
@@ -51,7 +76,8 @@ class CardListViewViewModel: ObservableObject {
     }
     
     // this function iterates through the user's cards and returns the credit card with the highest default earnings
-    func bestDefault(items: [Card]) -> String {
+    func bestDefault() -> String {
+        let items = self.cards
         var defaultCashBack = 0.0
         var defaultCard = "-"
         for card in items {
@@ -64,7 +90,8 @@ class CardListViewViewModel: ObservableObject {
     }
     
     // this function iterates through the user's cards and returns the credit card with the highest grocery earnings
-    func bestGroceries(items: [Card]) -> String {
+    func bestGroceries() -> String {
+        let items = self.cards
         var groceriesCashBack = 0.0
         var groceriesCard = "-"
         for card in items {
@@ -77,7 +104,8 @@ class CardListViewViewModel: ObservableObject {
     }
     
     // this function iterates through the user's cards and returns the credit card with the highest gas earnings
-    func bestGas(items: [Card]) -> String {
+    func bestGas() -> String {
+        let items = self.cards
         var gasCashBack = 0.0
         var gasCard = "-"
         for card in items {
@@ -90,7 +118,8 @@ class CardListViewViewModel: ObservableObject {
     }
     
     // this function iterates through the user's cards and returns the credit cards with fees sorted in decreasing order
-    func feeCards(items: [Card]) -> [Card] {
+    func feeCards() -> [Card] {
+        let items = self.cards
         var cardList: [Card] = []
         for item in items {
             if item.fee > 0 {
@@ -100,5 +129,10 @@ class CardListViewViewModel: ObservableObject {
         cardList.sort(by: {$0.fee > $1.fee})
         return cardList
         
+    }
+    
+    // this function returns all credit cards of the user
+    func allCards() -> [Card] {
+        return self.cards
     }
 }

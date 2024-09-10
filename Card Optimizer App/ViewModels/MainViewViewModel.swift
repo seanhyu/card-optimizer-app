@@ -9,10 +9,10 @@ import FirebaseAuth
 import Foundation
 
 // ViewModel for MainView
-class MainViewViewModel: ObservableObject {
+@Observable class MainViewViewModel {
     
     // instantiate and initiate variable for currentUserId to an empty string
-    @Published var currentUserId: String = ""
+    var currentUserId: String = ""
     
     // instantiate handler to track change in login state
     private var handler: AuthStateDidChangeListenerHandle?

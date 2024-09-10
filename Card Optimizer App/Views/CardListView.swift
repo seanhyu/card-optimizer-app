@@ -9,99 +9,108 @@ import SwiftUI
 
 // View for the list of cards
 struct CardListView: View {
-    // initiate StateObject variable for the corresponding ViewModel
-    @StateObject var viewModel: CardListViewViewModel
     
-    // instantiate variable to store all user credit cards
-    @FirestoreQuery var items: [Card]
-    
-    
-    init(userId: String) {
-        // initiate items to all user credit cards, pulled from the firestore database
-        self._items = FirestoreQuery(
-            collectionPath: "users/\(userId)/cards"
-        )
-        // initiate viewModel to the corresponding ViewModel for the user
-        self._viewModel = StateObject(
-            wrappedValue: CardListViewViewModel(userId: userId))
-    }
+    // initiate variable for the corresponding ViewModel
+    @State var viewModel = CardListViewViewModel()
     
     var body: some View {
+        
         NavigationView {
             VStack {
                 // list with sections that each pull the best cards from each category from the corresponding functions and displays them
                 List {
-                    
                     Section(header: Text("Best Card for Food")) {
-                        Text(viewModel.bestFood(items:items))
-                        }
-                    
+                        Text(viewModel.bestFood())
+                    }
                     Section(header: Text("Best Card for Groceries")) {
-                        Text(viewModel.bestGroceries(items:items))
-                        }
-                    
+                        Text(viewModel.bestGroceries())
+                    }
                     Section(
                         header: Text("Best Card for Gas"),
                         footer: Text("If the Citi Custom Cash Card is listed here, it assumes you only use this card for gas")) {
-                        Text(viewModel.bestGas(items:items))
+                            Text(viewModel.bestGas())
                         }
-                    
                     Section(header: Text("Best Default Card")) {
-                        Text(viewModel.bestDefault(items:items))
-                        }
-                    
+                        Text(viewModel.bestDefault())
+                    }
                     // displays all credit cards with annual fees
                     Section(header: Text("Cards with Annual Fees")) {
-                        ForEach(viewModel.feeCards(items:items)) {item in
+                        ForEach(viewModel.feeCards()) {item in
                             VStack(alignment: .leading) {
                                 Text(item.card)
-                                    
+                                
                                 Text("Fee: $\(item.fee)")
                                     .font(.footnote)
                                     .foregroundColor(Color(.secondaryLabel))
                             }
-                            
                         }
                     }
-                    
                     // lists all credit cards
                     Section(header: Text("All Cards")) {
-                        ForEach(items) {item in
-                            CardItemView(item: item)
-                            
+                        ForEach(viewModel.allCards()) {item in
+                            VStack(alignment: .leading) {
+                                Text(item.card)
+                                Text("\(Date(timeIntervalSince1970: item.joinDate).formatted(date: .abbreviated, time: .omitted))")
+                                    .font(.footnote)
+                                    .foregroundColor(Color(.secondaryLabel))
+                            }
                             // adds swipeActions to allow user to delete credit cards
-                                .swipeActions {
-                                    Button {
-                                        viewModel.delete(id: item.id)
-                                    } label: {
-                                        Text("Delete")
+                            .swipeActions {
+                                Button {
+                                    viewModel.delete(id: item.id)
+                                    // refreshes the card list upon deleting the card
+                                    Task {
+                                        await viewModel.fetchCards()
                                     }
-                                    .tint(.red)
+                                } label: {
+                                    Text("Delete")
                                 }
+                                .tint(.red)
+                            }
+                            
                         }
                     }
                 }
                 
-            }
-            // title of the page
-            .navigationTitle("Cards")
-            .toolbar {
-                // button to allow user to add new cards
-                Button {
-                    // if button is clicked, set the variable for showingNewCardView to true
-                    viewModel.showingNewCardView = true
-                } label: {
-                    Image(systemName: "plus")
+                // title of the page
+                .navigationTitle("Cards")
+                .toolbar {
+                    // button to allow user to add new cards
+                    Button {
+                        // if button is clicked, set the variable for showingNewCardView to true
+                        viewModel.showingNewCardView = true
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+                // display NewCardView view if showingNewCardView is true
+                .sheet(isPresented: $viewModel.showingNewCardView) {
+                    NewCardView(newCardPresented: $viewModel.showingNewCardView)
+                        .onDisappear {
+                            // refreshes the card list upon adding the card
+                            Task {
+                                await viewModel.fetchCards()
+                            }
+                        }
                 }
             }
-            // display NewCardView view if showingNewCardView is true
-            .sheet(isPresented: $viewModel.showingNewCardView) {
-                NewCardView(newCardPresented: $viewModel.showingNewCardView)
+            // loads the user card list before displaying
+            .onAppear {
+                
+                Task {
+                    await viewModel.fetchCards()
+                }
+                
             }
         }
     }
 }
 
+/*
 #Preview {
-    CardListView(userId: "0h6tNL3ijsOcXgkipY2vtEIQi0V2")
+    CardListView()
 }
+*/
+
+//$cardList.path = "users/\(viewModel.userId)/cards"
+//@FirestoreQuery(collectionPath: "users") var cardList: [Card]

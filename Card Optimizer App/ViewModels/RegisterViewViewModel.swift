@@ -10,14 +10,14 @@ import Foundation
 
 // viewModel for the RegisterView
 
-class RegisterViewViewModel: ObservableObject {
+@Observable class RegisterViewViewModel {
     
     // instantiate variables for name, email, password for the user as well as an error message, and set their values all to an empty string
     
-    @Published var name = ""
-    @Published var email = ""
-    @Published var password = ""
-    @Published var errorMessage = ""
+    var name = ""
+    var email = ""
+    var password = ""
+    var errorMessage = ""
     
     init() {}
     

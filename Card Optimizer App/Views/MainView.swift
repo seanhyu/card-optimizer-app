@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct MainView: View {
-
-    // initiate StateObject variable for the corresponding ViewModel
-    @StateObject var viewModel = MainViewViewModel()
+    // initiate variable for the corresponding ViewModel
+    @State var viewModel = MainViewViewModel()
     var body: some View {
         
         // if the user is signed in, show the cardlist and profile tab view
         if viewModel.isSignedIn, !viewModel.currentUserId.isEmpty {
             
             TabView {
-                CardListView(userId: viewModel.currentUserId)
+                
+                CardListView()
                     .tabItem {
                         Label("Home", systemImage: "house")
                     }

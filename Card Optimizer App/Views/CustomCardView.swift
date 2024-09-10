@@ -11,7 +11,7 @@ import SwiftUI
 struct CustomCardView: View {
     
     // stateObject variable to access the relevant viewModel logic
-    @StateObject var viewModel = CustomCardViewViewModel()
+    @State var viewModel = CustomCardViewViewModel()
     
     // variable for determining if this view should be presented
     @Binding var newCardPresented: Bool

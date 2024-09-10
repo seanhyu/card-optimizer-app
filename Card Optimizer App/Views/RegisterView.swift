@@ -11,7 +11,7 @@ import SwiftUI
 struct RegisterView: View {
     
     // variable for the relevant ViewModel
-    @StateObject var viewModel = RegisterViewViewModel()
+    @State var viewModel = RegisterViewViewModel()
     
     var body: some View {
         VStack {
